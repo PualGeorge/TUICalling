@@ -12,6 +12,7 @@
         </span>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item command="command-detect">Device testing(设备检测)</el-dropdown-item>
+          <el-dropdown-item command="command-question">常见问题</el-dropdown-item>
           <el-dropdown-item command="command-logout">Log out</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
@@ -28,6 +29,14 @@ export default {
       if (command === "command-detect") {
         window.open(
           "https://web.sdk.qcloud.com/trtc/webrtc/demo/detect/index.html",
+          "__blank"
+        );
+        return;
+      }
+
+      if (command === "command-question") {
+        window.open(
+          "https://cloud.tencent.com/document/product/647/45558",
           "__blank"
         );
         return;
